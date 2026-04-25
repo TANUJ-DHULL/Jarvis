@@ -1,0 +1,9 @@
+{
+  "clap_threshold": 7000,
+  "clap_window_seconds": 1.2,
+  "cooldown_seconds": 8,
+  "chunk_size": 1024,
+  "sample_rate": 44100,
+  "channels": 1,
+  "jarvis_command": "\"C:\\Jarvis Anti\\.conda\\python.exe\" \"C:\\Jarvis Anti\\main.py\""
+}

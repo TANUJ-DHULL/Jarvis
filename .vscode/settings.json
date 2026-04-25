@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/.conda": true,
+        "**/__pycache__": true
+    }
+}
