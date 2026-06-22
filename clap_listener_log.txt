@@ -1,4 +1,0 @@
-C:\Jarvis Anti\clap_launcher.py:10: DeprecationWarning: 'audioop' is deprecated and slated for removal in Python 3.13
-  import audioop
-[17:26:34] Launch command: "C:\Jarvis Anti\.conda\python.exe" "C:\Jarvis Anti\main.py"
-[17:26:36] Double clap listener active.

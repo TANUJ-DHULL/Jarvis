@@ -16648,5 +16648,239 @@
     "query": "none",
     "action": "no_command",
     "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:45:39.129724Z",
+    "query": "open github",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:45:41.666019Z",
+    "query": "open github",
+    "action": "open_application",
+    "note": "github"
+  },
+  {
+    "timestamp": "2026-05-12T12:45:49.838923Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:45:49.853439Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:45:55.671924Z",
+    "query": "open getup",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:45:57.952589Z",
+    "query": "open getup",
+    "action": "open_application",
+    "note": "getup"
+  },
+  {
+    "timestamp": "2026-05-12T12:46:05.084687Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:05.102145Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:09.781561Z",
+    "query": "search github",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:12.882355Z",
+    "query": "search github",
+    "action": "search",
+    "note": "github"
+  },
+  {
+    "timestamp": "2026-05-12T12:46:27.286576Z",
+    "query": "breakfast icon",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:39.136832Z",
+    "query": "breakfast icon",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:46.257819Z",
+    "query": "click first link",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:46:57.238662Z",
+    "query": "click first link",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:47:11.308356Z",
+    "query": "github's change is constant github gives you a head github",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:47:23.966913Z",
+    "query": "github's change is constant github gives you a head github",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:47:41.526021Z",
+    "query": "get's change in this constant github gives you a head and get up",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:48:57.647112Z",
+    "query": "search github",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:49:00.545807Z",
+    "query": "search github",
+    "action": "search",
+    "note": "github"
+  },
+  {
+    "timestamp": "2026-05-12T12:49:08.265774Z",
+    "query": "scroll up",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:49:12.482308Z",
+    "query": "scroll up",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:49:17.725803Z",
+    "query": "scroll up",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:49:21.186403Z",
+    "query": "scroll up",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:49:29.791720Z",
+    "query": "then go",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:54:38.877319Z",
+    "query": "from tech",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:54:46.023034Z",
+    "query": "from tech",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:54:50.995475Z",
+    "query": "from tech",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:05.522081Z",
+    "query": "from tech",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:14.658423Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:14.689292Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:21.771022Z",
+    "query": "from tech",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:36.239027Z",
+    "query": "from tech",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:44.149296Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:44.173067Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:48.875131Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:48.893232Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:55:55.932763Z",
+    "query": "from tech",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:56:13.201035Z",
+    "query": "from tech",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-05-12T12:56:18.036495Z",
+    "query": "from",
+    "action": "received",
+    "note": ""
   }
 ]
