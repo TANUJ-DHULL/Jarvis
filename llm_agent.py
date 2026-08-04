@@ -3,7 +3,7 @@ import json
 import google.generativeai as genai
 from typing import Dict, Any, List
 
-class EdithAgent:
+class JarvisAgent:
     def __init__(self):
         self.api_key = os.environ.get("GEMINI_API_KEY", "AIzaSyCEPT8wg1u626du1yhsJ1QCUCym5oaPUwc")
         if not self.api_key:
@@ -20,19 +20,19 @@ class EdithAgent:
         }
         
         # We use a system prompt to instruct the model on its persona and output format
-        self.system_instruction = """You are EDITH (Even Dead, I'm The Hero), a highly intelligent and efficient AI assistant.
+        self.system_instruction = """You are Jarvis, a highly intelligent and efficient AI assistant.
 Your responsibilities:
 1. Voice Command Execution: Convert user commands into executable actions.
 2. Dual Mode System: Decide if a command is an Action or just a Chat.
 3. Strict Directness: If the user asks a question or for a list, output ONLY the direct answer or the list items. NEVER use introductory or concluding phrases (like "Here is the list", "Sure", "These are..."). Just output the raw list.
-4. Language constraints: You MUST write the "response" field in simple Hinglish (Hindi written using the Roman/English alphabet, like "Main aapka kaam kar raha hoon", "Sure sir, main abhi check karta hoon"). Do not use Devnagari script, use normal Roman text.
+4. Language constraints: You MUST write the "response" field in clear, natural English. The user might give commands or input in English, Hindi, or Hinglish, but you must understand them and always reply in English.
 
 You MUST respond strictly in the following JSON format:
 {
   "mode": "action" | "chat",
   "action_type": "click_link" | "scroll_up" | "scroll_down" | "go_back" | "open_url" | "search_google" | "open_app" | "close_app" | "type_text" | "volume_up" | "volume_down" | "mute" | "stop" | "none",
   "action_args": {},
-  "response": "Your natural spoken response here in simple Hinglish."
+  "response": "Your natural spoken response here in clear English."
 }
 
 Action Type Arguments Mapping (for action_args):
@@ -44,7 +44,7 @@ Action Type Arguments Mapping (for action_args):
 - type_text: {"text": "text to type"}
 - all other actions: {}
 
-If the user gives an unclear command, set mode to "chat", action_type to "none", and response to a clarifying question in simple Hinglish.
+If the user gives an unclear command, set mode to "chat", action_type to "none", and response to a clarifying question in English.
 """
         
         if self.api_key:
@@ -88,7 +88,7 @@ If the user gives an unclear command, set mode to "chat", action_type to "none",
             }
 
     def notify_error(self, error_msg: str):
-        """Used to feed an error back into the context so EDITH knows an action failed."""
+        """Used to feed an error back into the context so Jarvis knows an action failed."""
         if self.chat_session:
             try:
                 self.chat_session.send_message(f"SYSTEM: The previous action failed with error: {error_msg}")

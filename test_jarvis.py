@@ -1,19 +1,19 @@
 import time
 import os
-from llm_agent import EdithAgent
+from llm_agent import JarvisAgent
 from browser_ops import BrowserManager
 
-def test_edith():
+def test_jarvis():
     # Only test if API key is set
     if not os.environ.get("GEMINI_API_KEY"):
         print("GEMINI_API_KEY not set. Cannot test LLM.")
         return
 
-    agent = EdithAgent()
+    agent = JarvisAgent()
     browser = BrowserManager()
 
     print("\n--- Test 1: Action Classification (Open URL) ---")
-    query = "EDITH, please open google.com"
+    query = "Jarvis, please open google.com"
     print(f"Query: {query}")
     decision = agent.process_query(query)
     print(f"Decision: {decision}")
@@ -42,4 +42,4 @@ def test_edith():
     print("Testing complete.")
 
 if __name__ == "__main__":
-    test_edith()
+    test_jarvis()

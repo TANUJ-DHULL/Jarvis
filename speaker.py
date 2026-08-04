@@ -1,7 +1,7 @@
 import pyttsx3
 
 def speak(text):
-    print(f"EDITH: {text}")
+    print(f"Jarvis: {text}")
     engine = pyttsx3.init()
     # Optional: Configure voice and speed
     voices = engine.getProperty('voices')

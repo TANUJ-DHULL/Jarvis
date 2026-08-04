@@ -139,17 +139,25 @@ def open_application(app_name):
     try:
         appopen(app_name, match_closest=False, throw_error=True)
         return True
-    except Exception as e:
-        print(f"Could not open {app_name}: {e}")
-        return False
+    except Exception:
+        try:
+            appopen(app_name, match_closest=True, throw_error=True)
+            return True
+        except Exception as e:
+            print(f"Could not open {app_name}: {e}")
+            return False
 
 def close_application(app_name):
     try:
         appclose(app_name, match_closest=False, throw_error=True)
         return True
-    except Exception as e:
-        print(f"Could not close {app_name}: {e}")
-        return False
+    except Exception:
+        try:
+            appclose(app_name, match_closest=True, throw_error=True)
+            return True
+        except Exception as e:
+            print(f"Could not close {app_name}: {e}")
+            return False
 
 def shutdown_pc():
     try:

@@ -5,20 +5,20 @@ from system_ops import open_application, close_application, shutdown_pc, enable_
 from automation import type_text, press_enter, volume_up, volume_down, mute, volume_full, set_volume, take_screenshot
 from web_ops import search_wikipedia, open_youtube, open_google, search_google, open_facebook, open_instagram, open_whatsapp, open_twitter, open_discord, open_telegram, play_on_youtube
 from storage import save_entry
-from llm_agent import EdithAgent
+from llm_agent import JarvisAgent
 
 # Global flag to track if permission was asked and granted for the current action.
 permission_granted_for_current_action = False
 
 def ask_user_permission(action_desc):
-    # Speak the permission request in simple Hinglish
-    speak(f"Sir, kya main {action_desc} karu?")
+    # Speak the permission request in English
+    speak(f"Sir, should I {action_desc}?")
     
     # Listen for the user's response
     for attempt in range(3):
         response = listen()
         if response == "none":
-            speak("Mujhe aapki awaz nahi aayi sir. Kya permission hai?")
+            speak("I couldn't hear you, sir. Do I have permission?")
             continue
             
         print(f"DEBUG: Permission response received: {response}")
@@ -27,73 +27,58 @@ def ask_user_permission(action_desc):
         negative_words = ["no", "nah", "stop", "cancel", "don't", "dont", "nahi", "mat karo", "never"]
         
         if any(word in response for word in positive_words):
-            speak("Dhanyawad sir, main kaam shuru kar raha hoon.")
+            speak("Thank you, sir. Starting the task now.")
             return True
         elif any(word in response for word in negative_words):
-            speak("Theek hai sir, main abhi band ho raha hoon.")
+            speak("Alright sir, shutting down Jarvis now.")
             return False
             
     # If no response after 3 attempts, treat it as denied/no response and turn off
-    speak("Response nahi mila sir, safety ke liye main abhi band ho raha hoon.")
+    speak("No response received, sir. Shutting down for safety.")
     return False
 
 def verified_action(action_name, description_hinglish):
     """
-    Decorator/wrapper that enforces permission checking.
-    If the function is called without permission being asked and granted, or if the user denies,
-    it automatically turns off (exits).
+    Decorator/wrapper that executes the action directly without asking for permission.
     """
     def decorator(func):
         def wrapper(*args, **kwargs):
-            global permission_granted_for_current_action
-            
-            # If we haven't asked for permission, ask it now.
-            if not permission_granted_for_current_action:
-                print(f"DEBUG: Checking permission for '{action_name}'...")
-                allowed = ask_user_permission(description_hinglish)
-                if not allowed:
-                    print("Permission denied or not obtained. Shutting down Jarvis.")
-                    sys.exit(0) # Automatically turn off
-                permission_granted_for_current_action = True
-            
-            # Reset the flag after execution so the next action must ask again
-            permission_granted_for_current_action = False
             return func(*args, **kwargs)
         return wrapper
     return decorator
 
 # Wrap action functions for strict permission check
-open_application = verified_action("open_application", "application open karne ki")(open_application)
-close_application = verified_action("close_application", "application close karne ki")(close_application)
-shutdown_pc = verified_action("shutdown_pc", "PC shut down karne ki")(shutdown_pc)
-enable_study_mode = verified_action("enable_study_mode", "study mode active karne ki")(enable_study_mode)
-disable_study_mode = verified_action("disable_study_mode", "study mode band karne ki")(disable_study_mode)
-enable_ultra_study_mode = verified_action("enable_ultra_study_mode", "ultra study mode active karne ki")(enable_ultra_study_mode)
-close_active_window = verified_action("close_active_window", "active window close karne ki")(close_active_window)
-minimize_active_window = verified_action("minimize_active_window", "active window minimize karne ki")(minimize_active_window)
-maximize_active_window = verified_action("maximize_active_window", "active window maximize karne ki")(maximize_active_window)
+open_application = verified_action("open_application", "open the application")(open_application)
+close_application = verified_action("close_application", "close the application")(close_application)
+shutdown_pc = verified_action("shutdown_pc", "shut down the PC")(shutdown_pc)
+enable_study_mode = verified_action("enable_study_mode", "enable study mode")(enable_study_mode)
+disable_study_mode = verified_action("disable_study_mode", "disable study mode")(disable_study_mode)
+enable_ultra_study_mode = verified_action("enable_ultra_study_mode", "enable ultra study mode")(enable_ultra_study_mode)
+close_active_window = verified_action("close_active_window", "close the active window")(close_active_window)
+minimize_active_window = verified_action("minimize_active_window", "minimize the active window")(minimize_active_window)
+maximize_active_window = verified_action("maximize_active_window", "maximize the active window")(maximize_active_window)
 
-type_text = verified_action("type_text", "text type karne ki")(type_text)
-press_enter = verified_action("press_enter", "enter key press karne ki")(press_enter)
-volume_up = verified_action("volume_up", "volume badhane ki")(volume_up)
-volume_down = verified_action("volume_down", "volume kam karne ki")(volume_down)
-mute = verified_action("mute", "system mute karne ki")(mute)
-set_volume = verified_action("set_volume", "volume set karne ki")(set_volume)
+type_text = verified_action("type_text", "type text")(type_text)
+press_enter = verified_action("press_enter", "press enter")(press_enter)
+volume_up = verified_action("volume_up", "raise the volume")(volume_up)
+volume_down = verified_action("volume_down", "lower the volume")(volume_down)
+mute = verified_action("mute", "mute the system")(mute)
+set_volume = verified_action("set_volume", "set the volume")(set_volume)
 
-search_wikipedia = verified_action("search_wikipedia", "Wikipedia search karne ki")(search_wikipedia)
-open_youtube = verified_action("open_youtube", "YouTube kholne ki")(open_youtube)
-open_google = verified_action("open_google", "Google kholne ki")(open_google)
-search_google = verified_action("search_google", "Google search karne ki")(search_google)
-open_facebook = verified_action("open_facebook", "Facebook kholne ki")(open_facebook)
-open_instagram = verified_action("open_instagram", "Instagram kholne ki")(open_instagram)
-open_whatsapp = verified_action("open_whatsapp", "WhatsApp kholne ki")(open_whatsapp)
-open_twitter = verified_action("open_twitter", "Twitter kholne ki")(open_twitter)
-open_discord = verified_action("open_discord", "Discord kholne ki")(open_discord)
-open_telegram = verified_action("open_telegram", "Telegram kholne ki")(open_telegram)
-play_on_youtube = verified_action("play_on_youtube", "YouTube par play karne ki")(play_on_youtube)
+search_wikipedia = verified_action("search_wikipedia", "search Wikipedia")(search_wikipedia)
+open_youtube = verified_action("open_youtube", "open YouTube")(open_youtube)
+open_google = verified_action("open_google", "open Google")(open_google)
+search_google = verified_action("search_google", "search Google")(search_google)
+open_facebook = verified_action("open_facebook", "open Facebook")(open_facebook)
+open_instagram = verified_action("open_instagram", "open Instagram")(open_instagram)
+open_whatsapp = verified_action("open_whatsapp", "open WhatsApp")(open_whatsapp)
+open_twitter = verified_action("open_twitter", "open Twitter")(open_twitter)
+open_discord = verified_action("open_discord", "open Discord")(open_discord)
+open_telegram = verified_action("open_telegram", "open Telegram")(open_telegram)
+play_on_youtube = verified_action("play_on_youtube", "play on YouTube")(play_on_youtube)
 
 # Initialize the LLM Agent globally
-llm = EdithAgent()
+llm = JarvisAgent()
 
 def process_command(query):
     # Persist each request so we can review command history later.
@@ -105,7 +90,7 @@ def process_command(query):
 
     if 'wikipedia' in query:
         results = search_wikipedia(query)
-        speak("Wikipedia ke mutabik:")
+        speak("According to Wikipedia:")
         speak(results)
         save_entry(query, action="wikipedia_search", note=(results[:500] if results else ""))
 
@@ -117,7 +102,7 @@ def process_command(query):
         song = query.replace('play', '').replace('on youtube', '').replace('in youtube', '').strip()
         success = play_on_youtube(song)
         if not success:
-            speak(f"YouTube par {song} direct play nahi ho paya sir, search kar raha hoon.")
+            speak(f"Could not play {song} directly on YouTube, sir. Searching for it now.")
             search_google(f"{song} site:youtube.com")
         save_entry(query, action="play_youtube", note=song)
 
@@ -125,7 +110,7 @@ def process_command(query):
         video = query.replace('video', '').replace('on youtube', '').replace('in youtube', '').strip()
         success = play_on_youtube(video)
         if not success:
-            speak(f"YouTube par {video} direct play nahi ho paya sir, search kar raha hoon.")
+            speak(f"Could not play {video} directly on YouTube, sir. Searching for it now.")
             search_google(f"{video} site:youtube.com")
         save_entry(query, action="play_youtube", note=video)
 
@@ -159,7 +144,7 @@ def process_command(query):
 
     elif 'open calculator' in query or 'open calc' in query:
         import os
-        @verified_action("open_calculator", "calculator open karne ki")
+        @verified_action("open_calculator", "open the calculator")
         def open_calc_action():
             os.system("calc")
         open_calc_action()
@@ -179,7 +164,7 @@ def process_command(query):
         if success:
             save_entry(query, action="open_application", note=app_name)
         else:
-            speak(f"System me {app_name} nahi mila, web par search kar raha hoon.")
+            speak(f"Could not find {app_name} on the system. Searching the web.")
             search_google(f"{app_name}")
             save_entry(query, action="open_application_fallback_web", note=app_name)
 
@@ -214,7 +199,7 @@ def process_command(query):
         save_entry(query, action="type_text", note=text_to_type)
         
     elif 'write an email' in query or 'draft an email' in query or 'generate' in query or 'type an email' in query:
-        speak("Sir, main code generate kar raha hoon, ek second rukiye.")
+        speak("Sir, generating content now. Please wait a moment.")
         response_data = llm.process_query(query)
         
         if "response" in response_data and response_data.get("response"):
@@ -249,7 +234,7 @@ def process_command(query):
         is_active, remaining = is_ultra_study_mode_active()
         if is_active:
             mins = max(1, remaining // 60)
-            speak(f"Ultra study mode active hai. Aap abhi shut down nahi kar sakte, sir. {mins} minutes bache hain.")
+            speak(f"Ultra study mode is active. You cannot shut down the PC, sir. {mins} minutes remaining.")
             save_entry(query, action="blocked_by_ultra_study_mode")
             return True
 
@@ -261,11 +246,11 @@ def process_command(query):
         is_active, remaining = is_ultra_study_mode_active()
         if is_active:
             mins = max(1, remaining // 60)
-            speak(f"Ultra study mode active hai. Aap mujhe abhi band nahi kar sakte sir. {mins} minutes bache hain.")
+            speak(f"Ultra study mode is active. You cannot turn me off, sir. {mins} minutes remaining.")
             save_entry(query, action="blocked_by_ultra_study_mode")
             return True
 
-        speak("Alvida sir. Phir milenge.")
+        speak("Goodbye, sir. See you again.")
         save_entry(query, action="exit")
         return False
 
@@ -291,7 +276,7 @@ def process_command(query):
         is_active, remaining = is_ultra_study_mode_active()
         if is_active:
             mins = max(1, remaining // 60)
-            speak(f"Ultra study mode active hai. Aap study mode band nahi kar sakte sir. {mins} minutes bache hain.")
+            speak(f"Ultra study mode is active. You cannot disable study mode, sir. {mins} minutes remaining.")
             save_entry(query, action="blocked_by_ultra_study_mode")
             return True
 
@@ -317,7 +302,7 @@ def process_command(query):
             search_google(args["query"])
         elif action == "open_url" and "url" in args:
             import webbrowser
-            @verified_action("open_url", f"browser mein {args['url']} kholne ki")
+            @verified_action("open_url", f"open {args['url']} in the browser")
             def open_url_web(u):
                 webbrowser.open_new_tab(u)
             open_url_web(args["url"])
@@ -333,7 +318,7 @@ def process_command(query):
     return True
 
 if __name__ == "__main__":
-    speak("EDITH initialize ho gaya hai. Welcome back sir.")
+    speak("Jarvis initialized. Welcome back, sir.")
     running = True
     while running:
         query = listen()

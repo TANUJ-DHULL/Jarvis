@@ -16882,5 +16882,371 @@
     "query": "from",
     "action": "received",
     "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:30:02.346386Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:32:46.585856Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:32:46.601436Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:32:52.861097Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:32:52.872611Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:00.087514Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:00.103775Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:07.344637Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:07.364931Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:12.967502Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:12.979773Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:20.700410Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:20.713070Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:29.608279Z",
+    "query": "hey grandma, my mom is dead right now.",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:37.400348Z",
+    "query": "hey grandma, my mom is dead right now.",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:43.748732Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:43.760017Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:50.034710Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:50.045868Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:56.297259Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:33:56.309384Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:02.565618Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:02.577797Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:08.837833Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:08.849509Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:15.111721Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:15.124662Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:21.387978Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:34:21.400641Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-22T03:54:23.969126Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-24T17:38:23.778459Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-24T17:39:50.810258Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-06-24T17:50:27.492874Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:12.200611Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:12.236802Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:18.501307Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:18.534587Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:29.289629Z",
+    "query": "open youtube",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:30.500512Z",
+    "query": "open youtube",
+    "action": "open_youtube",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:39.652964Z",
+    "query": "60 of volume",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:47.805902Z",
+    "query": "60 of volume",
+    "action": "set_volume",
+    "note": "60"
+  },
+  {
+    "timestamp": "2026-08-03T17:34:56.847112Z",
+    "query": "open whatsapp",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:34:58.386356Z",
+    "query": "open whatsapp",
+    "action": "open_whatsapp",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:05.239491Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:05.255517Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:09.804507Z",
+    "query": "scroll up",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:14.358699Z",
+    "query": "scroll up",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:22.786980Z",
+    "query": "scroll down",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:26.473374Z",
+    "query": "scroll down",
+    "action": "llm_fallback",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:39.139065Z",
+    "query": "open india scotland new",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:35:45.057105Z",
+    "query": "open india scotland new",
+    "action": "open_application_fallback_web",
+    "note": "india scotland new"
+  },
+  {
+    "timestamp": "2026-08-03T17:36:02.070512Z",
+    "query": "open youtube and search dear india scotland",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:36:02.186979Z",
+    "query": "open youtube and search dear india scotland",
+    "action": "open_youtube",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:36:15.674908Z",
+    "query": "search india's got talent",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:36:15.831420Z",
+    "query": "search india's got talent",
+    "action": "search",
+    "note": "india's got talent"
+  },
+  {
+    "timestamp": "2026-08-03T17:36:27.806833Z",
+    "query": "play india's go latent time",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:36:29.433357Z",
+    "query": "play india's go latent time",
+    "action": "play_youtube",
+    "note": "india's go latent time"
+  },
+  {
+    "timestamp": "2026-08-03T17:36:47.798632Z",
+    "query": "play maso",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:36:49.450257Z",
+    "query": "play maso",
+    "action": "play_youtube",
+    "note": "maso"
+  },
+  {
+    "timestamp": "2026-08-03T17:37:07.072084Z",
+    "query": "none",
+    "action": "received",
+    "note": ""
+  },
+  {
+    "timestamp": "2026-08-03T17:37:07.087501Z",
+    "query": "none",
+    "action": "no_command",
+    "note": ""
   }
 ]
