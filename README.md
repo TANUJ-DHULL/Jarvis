@@ -1,6 +1,6 @@
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/TANUJ-DHULL/Jarvis/badge)](https://scorecard.dev/viewer/?uri=github.com/TANUJ-DHULL/Jarvis)
 # Jarvis Anti - Personal Assistant
 
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/TANUJ-DHULL/Jarvis/badge)](https://scorecard.dev/viewer/?uri=github.com/TANUJ-DHULL/Jarvis)
 Jarvis Anti is a local, voice-controlled intelligent personal assistant designed for both automation and deep work management. It accepts English and Hinglish voice commands, translating and executing them instantly to control the Windows PC.
 
 ---
